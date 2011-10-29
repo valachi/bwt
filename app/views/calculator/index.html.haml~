@@ -1,0 +1,17 @@
+=form_tag costs_path, method: "post" do
+  =label_tag :from, "From:"
+  %br
+  =date_select "calculator", :from, :order => [:day, :month, :year]
+  %br
+  =label_tag :to, "To:"
+  %br
+  =date_select "calculator", :to, :order => [:day, :month, :year]
+  %br
+  =label_tag :size, "Container size:"
+  %br
+  =select_tag :size, options_for_select([20, 40])
+  %br
+  =label_tag :terminal, "Terminal"
+  %br
+  =select_tag :terminal, options_for_select(["PLP", "FCT"])
+  =submit_tag "Calculate"

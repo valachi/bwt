@@ -1,0 +1,3 @@
+Bwt::Application.routes.draw do
+  root to: "Calculator#index"
+end
