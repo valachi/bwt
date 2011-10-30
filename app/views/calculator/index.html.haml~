@@ -1,17 +1,19 @@
 =form_tag costs_path, method: "post" do
-  =label_tag :from, "From:"
+  =label_tag :from, "От:"
   %br
   =date_select "calculator", :from, :order => [:day, :month, :year]
   %br
-  =label_tag :to, "To:"
+  =label_tag :to, "До:"
   %br
   =date_select "calculator", :to, :order => [:day, :month, :year]
   %br
-  =label_tag :size, "Container size:"
+  =label_tag :size, "Контейнер:"
   %br
   =select_tag :size, options_for_select([20, 40])
   %br
-  =label_tag :terminal, "Terminal"
+  =label_tag :terminal, "Терминал:"
   %br
   =select_tag :terminal, options_for_select(["PLP", "FCT"])
-  =submit_tag "Calculate"
+  %br
+  %br
+  =submit_tag "Посчитать"

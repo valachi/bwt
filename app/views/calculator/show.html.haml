@@ -1,9 +1,13 @@
 %h1="Терминал: Maersk #{@terminal}"
 %p
-="C: #{@from} По: #{@to}"
+="C: #{I18n.l @from, locale: :ru}"
+%p
+="По: #{I18n.l @to, locale: :ru}"
 %p
 ="Дней простоя: #{@days}"
 %p
 ="Размер контейнера: #{@size}"
 %p
-="<strong>Итого: #{@price}$</strong>".html_safe
+=raw("<strong>Итого: #{@price}$</strong>")
+%p
+=link_to "Назад", root_path
