@@ -9,7 +9,7 @@ class CalculatorController < ApplicationController
                          params[:calculator]["to(2i)"].to_i,
                          params[:calculator]["to(3i)"].to_i)
 #    @to = Time.local(*params[:calculator].sort.map(&:last).map(&:to_i)) 
-    @days = (@to.yday - @from.yday)+1
+    @days = (@to - @from).to_i + 1
     @terminal = params[:terminal]
     @price = calculate(@days, @size, @terminal)
   end
