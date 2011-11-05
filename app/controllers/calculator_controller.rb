@@ -24,40 +24,40 @@ class CalculatorController < ApplicationController
     if terminal == "PLP"
       if size == 20
         case days
-          when 0..5 then 0
-          when 6 then 75
-          when 7..8 then 25
-          when 9..20 then 75
+          when 0..5; 0
+          when 6; 75
+          when 7..8; 25
+          when 9..20; 75
           else 125
         end
       elsif size == 40
         case days
-          when 0..5 then 0
-          when 6 then 150
-          when 7..8 then 50
-          when 9..20 then 150
+          when 0..5; 0
+          when 6; 150
+          when 7..8; 50
+          when 9..20; 150
           else 250
         end
       end
     elsif terminal == "FCT"
       if size == 20
         case days
-          when 0..5 then 0
-          when 6 then 75
-          when 7..8 then 25
-          when 9..20 then 115
-          when 21..30 then 165
-          when 31..60 then 150
+          when 0..5; 0
+          when 6; 75
+          when 7..8; 25
+          when 9..20; 115
+          when 21..30; 165
+          when 31..60; 150
           else 135
         end
       elsif size == 40
         case days
-          when 0..5 then 0
-          when 6 then 150
-          when 7..8 then 50
-          when 9..20 then 230
-          when 21..30 then 330
-          when 31..60 then 300
+          when 0..5; 0
+          when 6; 150
+          when 7..8; 50
+          when 9..20; 230
+          when 21..30; 330
+          when 31..60; 300
           else 270
         end
       end
